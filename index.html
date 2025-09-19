@@ -1,142 +1,267 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Práctica HTML y CSS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        section {
-            margin-bottom: 30px;
-            padding: 15px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-        }
-        img {
-            max-width: 200px;
-        }
-        table, th, td {
-            border: 1px solid #555;
-            border-collapse: collapse;
-            padding: 5px;
-        }
-        mark {
-            background-color: yellow;
-        }
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de práctica HTML y CSS</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #357ab7);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    main {
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+    section {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: #357ab7;
+      border-left: 5px solid #4a90e2;
+      padding-left: 10px;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      color: #2c3e50;
+    }
+    .explicacion {
+      background: #eef4fc;
+      border-left: 4px solid #4a90e2;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    ul, ol {
+      padding-left: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #357ab7;
+      color: #fff;
+    }
+    img {
+      border-radius: 10px;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    video, audio, canvas {
+      display: block;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+    canvas {
+      border: 2px dashed #357ab7;
+    }
+    figure {
+      text-align: center;
+      margin: 15px 0;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-style: italic;
+      color: #555;
+    }
+    progress, meter {
+      width: 100%;
+      height: 20px;
+    }
+    details {
+      background: #eef4fc;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    mark {
+      background: #f9e65c;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      background: #357ab7;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 2rem;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+  </style>
 </head>
 <body>
 
+  <header>
     <h1>Página de práctica con HTML y CSS</h1>
-    <p>En este documento se muestran etiquetas básicas y también nuevas etiquetas con ejemplos y explicaciones.</p>
+    <p>Ejemplos y explicaciones de etiquetas básicas y avanzadas</p>
+  </header>
 
+  <main>
     <!-- ETIQUETAS BÁSICAS -->
     <section>
-        <h2>Etiquetas básicas</h2>
-        <h3>&lt;h1&gt; - Títulos</h3>
-        <p>Sirve para colocar encabezados. Ejemplo: <h1>Este es un título grande</h1></p>
+      <h2>Etiquetas básicas</h2>
 
-        <h3>&lt;p&gt; - Párrafo</h3>
-        <p>Se usa para texto normal. Ejemplo: <p>Hola, soy un párrafo de ejemplo.</p></p>
+      <h3>&lt;h1&gt; - Títulos</h3>
+      <h1>Este es un título grande</h1>
+      <div class="explicacion">
+        La etiqueta <b>&lt;h1&gt;</b> se usa para títulos principales. Existen hasta <b>&lt;h6&gt;</b>, cada uno con un tamaño menor.
+      </div>
 
-        <h3>&lt;a&gt; - Enlace</h3>
-        <p>Sirve para crear vínculos. Ejemplo: 
-        <a href="https://www.google.com" target="_blank">Ir a Google</a></p>
+      <h3>&lt;p&gt; - Párrafo</h3>
+      <p>Hola, soy un párrafo de ejemplo.</p>
+      <div class="explicacion">
+        La etiqueta <b>&lt;p&gt;</b> sirve para escribir bloques de texto corrido, como párrafos de un documento.
+      </div>
 
-        <h3>&lt;img&gt; - Imagen</h3>
-        <p>Inserta imágenes. Ejemplo:</p>
-        <img src="https://via.placeholder.com/150" alt="Ejemplo de imagen">
+      <h3>&lt;a&gt; - Enlace</h3>
+      <a href="https://www.google.com" target="_blank">Ir a Google</a>
+      <div class="explicacion">
+        La etiqueta <b>&lt;a&gt;</b> crea enlaces. El atributo <b>href</b> define la URL y <b>target="_blank"</b> abre el enlace en una nueva pestaña.
+      </div>
 
-        <h3>&lt;ul&gt; y &lt;ol&gt; - Listas</h3>
-        <p>Listas desordenadas y ordenadas:</p>
-        <ul>
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-        </ul>
-        <ol>
-            <li>Primero</li>
-            <li>Segundo</li>
-        </ol>
+      <h3>&lt;img&gt; - Imagen</h3>
+      <img src="arcoiris.jpg" alt="Ejemplo de imagen">
+      <div class="explicacion">
+        La etiqueta <b>&lt;img&gt;</b> inserta imágenes. El atributo <b>src</b> indica la dirección y <b>alt</b> es el texto alternativo si la imagen no carga.
+      </div>
 
-        <h3>&lt;table&gt; - Tablas</h3>
-        <p>Permiten mostrar datos en filas y columnas:</p>
-        <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-            </tr>
-            <tr>
-                <td>Juan</td>
-                <td>20</td>
-            </tr>
-        </table>
+      <h3>&lt;ul&gt; y &lt;ol&gt; - Listas</h3>
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+      </ul>
+      <ol>
+        <li>Primero</li>
+        <li>Segundo</li>
+      </ol>
+      <div class="explicacion">
+        <b>&lt;ul&gt;</b> crea listas sin orden (viñetas), mientras que <b>&lt;ol&gt;</b> genera listas ordenadas con números. Dentro se usan <b>&lt;li&gt;</b> para cada ítem.
+      </div>
+
+      <h3>&lt;table&gt; - Tablas</h3>
+      <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+        <tr>
+          <td>Juan</td>
+          <td>20</td>
+        </tr>
+      </table>
+      <div class="explicacion">
+        La etiqueta <b>&lt;table&gt;</b> crea tablas. Se usan <b>&lt;tr&gt;</b> para filas, <b>&lt;th&gt;</b> para encabezados y <b>&lt;td&gt;</b> para celdas.
+      </div>
     </section>
 
     <!-- ETIQUETAS NUEVAS -->
     <section>
-        <h2>Etiquetas nuevas</h2>
+      <h2>Etiquetas nuevas</h2>
 
-        <h3>&lt;video&gt;</h3>
-        <p>Permite insertar videos en la página:</p>
-        <video controls width="250">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-        </video>
+      <h3>&lt;video&gt;</h3>
+      <video controls width="300">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <div class="explicacion">
+        <b>&lt;video&gt;</b> inserta videos en la página. El atributo <b>controls</b> añade botones de reproducción y volumen.
+      </div>
 
-        <h3>&lt;audio&gt;</h3>
-        <p>Se usa para insertar audio:</p>
-        <audio controls>
-            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-            Tu navegador no soporta audio.
-        </audio>
+      <h3>&lt;audio&gt;</h3>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      </audio>
+      <div class="explicacion">
+        <b>&lt;audio&gt;</b> permite reproducir sonidos o música en la web. Igual que el video, <b>controls</b> añade controles básicos.
+      </div>
 
-        <h3>&lt;canvas&gt;</h3>
-        <p>Área de dibujo con JavaScript:</p>
-        <canvas id="miCanvas" width="200" height="100"></canvas>
-        <script>
-            let c = document.getElementById("miCanvas");
-            let ctx = c.getContext("2d");
-            ctx.fillStyle = "red";
-            ctx.fillRect(20, 20, 150, 50);
-        </script>
+      <h3>&lt;canvas&gt;</h3>
+      <canvas id="miCanvas" width="300" height="120"></canvas>
+      <script>
+        let c = document.getElementById("miCanvas");
+        let ctx = c.getContext("2d");
+        ctx.fillStyle = "#4a90e2";
+        ctx.fillRect(30, 30, 200, 60);
+        ctx.fillStyle = "#fff";
+        ctx.font = "20px Arial";
+        ctx.fillText("Canvas!", 100, 65);
+      </script>
+      <div class="explicacion">
+        <b>&lt;canvas&gt;</b> crea un lienzo donde se puede dibujar usando JavaScript, como gráficos, formas o animaciones.
+      </div>
 
-        <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
-        <p>Sirve para mostrar imágenes con una descripción:</p>
-        <figure>
-            <img src="https://via.placeholder.com/150" alt="Ejemplo">
-            <figcaption>Figura con descripción</figcaption>
-        </figure>
+      <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
+      <figure>
+        <img src="https://via.placeholder.com/250x150" alt="Ejemplo">
+        <figcaption>Figura con descripción</figcaption>
+      </figure>
+      <div class="explicacion">
+        <b>&lt;figure&gt;</b> agrupa imágenes, gráficos o diagramas, y <b>&lt;figcaption&gt;</b> añade una descripción asociada.
+      </div>
 
-        <h3>&lt;progress&gt;</h3>
-        <p>Muestra progreso de una tarea:</p>
-        <progress value="70" max="100"></progress> 70%
+      <h3>&lt;progress&gt;</h3>
+      <progress value="70" max="100"></progress>
+      <div class="explicacion">
+        <b>&lt;progress&gt;</b> representa el avance de una tarea en curso, con valores de progreso (ejemplo: 70 de 100).
+      </div>
 
-        <h3>&lt;meter&gt;</h3>
-        <p>Muestra una medida dentro de un rango:</p>
-        <meter value="0.7" min="0" max="1">70%</meter>
+      <h3>&lt;meter&gt;</h3>
+      <meter value="0.7" min="0" max="1">70%</meter>
+      <div class="explicacion">
+        <b>&lt;meter&gt;</b> muestra una medida dentro de un rango, como niveles de batería o calificación de desempeño.
+      </div>
 
-        <h3>&lt;details&gt; y &lt;summary&gt;</h3>
-        <p>Permite mostrar/ocultar información:</p>
-        <details>
-            <summary>Haz clic para ver más</summary>
-            <p>Este texto estaba oculto.</p>
-        </details>
+      <h3>&lt;details&gt; y &lt;summary&gt;</h3>
+      <details>
+        <summary>Haz clic para ver más</summary>
+        <p>Este texto estaba oculto.</p>
+      </details>
+      <div class="explicacion">
+        <b>&lt;details&gt;</b> permite ocultar y mostrar información, y <b>&lt;summary&gt;</b> define el texto que se ve como título desplegable.
+      </div>
 
-        <h3>&lt;mark&gt;</h3>
-        <p>Resalta texto dentro de un párrafo:  
-        Ejemplo: Esto es un <mark>texto resaltado</mark>.</p>
+      <h3>&lt;mark&gt;</h3>
+      <p>Ejemplo: Esto es un <mark>texto resaltado</mark>.</p>
+      <div class="explicacion">
+        La etiqueta <b>&lt;mark&gt;</b> resalta un fragmento de texto, como si lo marcaras con un resaltador.
+      </div>
     </section>
+  </main>
+
 
 </body>
 </html>
