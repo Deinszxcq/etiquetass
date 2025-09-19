@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Práctica HTML y CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 200px;
+        }
+        table, th, td {
+            border: 1px solid #555;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        mark {
+            background-color: yellow;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Página de práctica con HTML y CSS</h1>
+    <p>En este documento se muestran etiquetas básicas y también nuevas etiquetas con ejemplos y explicaciones.</p>
+
+    <!-- ETIQUETAS BÁSICAS -->
+    <section>
+        <h2>Etiquetas básicas</h2>
+        <h3>&lt;h1&gt; - Títulos</h3>
+        <p>Sirve para colocar encabezados. Ejemplo: <h1>Este es un título grande</h1></p>
+
+        <h3>&lt;p&gt; - Párrafo</h3>
+        <p>Se usa para texto normal. Ejemplo: <p>Hola, soy un párrafo de ejemplo.</p></p>
+
+        <h3>&lt;a&gt; - Enlace</h3>
+        <p>Sirve para crear vínculos. Ejemplo: 
+        <a href="https://www.google.com" target="_blank">Ir a Google</a></p>
+
+        <h3>&lt;img&gt; - Imagen</h3>
+        <p>Inserta imágenes. Ejemplo:</p>
+        <img src="https://via.placeholder.com/150" alt="Ejemplo de imagen">
+
+        <h3>&lt;ul&gt; y &lt;ol&gt; - Listas</h3>
+        <p>Listas desordenadas y ordenadas:</p>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+        </ul>
+        <ol>
+            <li>Primero</li>
+            <li>Segundo</li>
+        </ol>
+
+        <h3>&lt;table&gt; - Tablas</h3>
+        <p>Permiten mostrar datos en filas y columnas:</p>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>20</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ETIQUETAS NUEVAS -->
+    <section>
+        <h2>Etiquetas nuevas</h2>
+
+        <h3>&lt;video&gt;</h3>
+        <p>Permite insertar videos en la página:</p>
+        <video controls width="250">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+
+        <h3>&lt;audio&gt;</h3>
+        <p>Se usa para insertar audio:</p>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
+
+        <h3>&lt;canvas&gt;</h3>
+        <p>Área de dibujo con JavaScript:</p>
+        <canvas id="miCanvas" width="200" height="100"></canvas>
+        <script>
+            let c = document.getElementById("miCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(20, 20, 150, 50);
+        </script>
+
+        <h3>&lt;figure&gt; y &lt;figcaption&gt;</h3>
+        <p>Sirve para mostrar imágenes con una descripción:</p>
+        <figure>
+            <img src="https://via.placeholder.com/150" alt="Ejemplo">
+            <figcaption>Figura con descripción</figcaption>
+        </figure>
+
+        <h3>&lt;progress&gt;</h3>
+        <p>Muestra progreso de una tarea:</p>
+        <progress value="70" max="100"></progress> 70%
+
+        <h3>&lt;meter&gt;</h3>
+        <p>Muestra una medida dentro de un rango:</p>
+        <meter value="0.7" min="0" max="1">70%</meter>
+
+        <h3>&lt;details&gt; y &lt;summary&gt;</h3>
+        <p>Permite mostrar/ocultar información:</p>
+        <details>
+            <summary>Haz clic para ver más</summary>
+            <p>Este texto estaba oculto.</p>
+        </details>
+
+        <h3>&lt;mark&gt;</h3>
+        <p>Resalta texto dentro de un párrafo:  
+        Ejemplo: Esto es un <mark>texto resaltado</mark>.</p>
+    </section>
+
+</body>
+</html>
